@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">AlcoolGasolina</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_carros_title">Carros</string>
+    <string name="fragment_main_title">Alc/Gas</string>
+    <string name="fragment_viagem_title">Viagem</string>
+    <string name="adicionar_carro">Adicionar carro</string>
+    <string name="nome_carro">Nome do carro</string>
+    <string name="km_litro_alcool_cidade">Km/l álcool cidade</string>
+    <string name="km_litro_gasolina_cidade">Km/l gasolina cidade</string>
+    <string name="km_litro_alcool_viagem">Km/l álcool viagem</string>
+    <string name="km_litro_gasolina_viagem">Km/l gasolina viagem</string>
+    <string name="cadastrar_carro">Cadastrar carro</string>
+    <string name="erro_cadastrar_carro">Erro ao cadastrar carro.</string>
+    <string name="cadastrado_com_sucesso">Carro cadastrado com sucesso.</string>
+    <string name="preencher_campo_nome">Preencher campo nome.</string>
+    <string name="preencher_campo_alcool_cidade">Preencher campo álcool cidade.</string>
+    <string name="preencher_campo_gasolina_cidade">Preencher campo gasolina cidade.</string>
+    <string name="preencher_campo_alcool_viagem">Preencher campo álcool viagem.</string>
+    <string name="preencher_campo_gasolina_viagem">Preencher campo gasolina viagem.</string>
+    <string name="erro_excluir_carro">Erro ao excluir carro.</string>
+    <string name="carro_excluido_sucesso">Carro excluído com sucesso.</string>
+    <string name="deseja_excluir_carro">Tem certeza que deseja excluir carro?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="editar_carro">Editar</string>
+    <string name="editado_com_sucesso">Carro editado com sucesso.</string>
+</resources>
