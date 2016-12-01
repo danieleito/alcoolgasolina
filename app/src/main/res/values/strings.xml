@@ -29,4 +29,10 @@
     <string name="nao">Não</string>
     <string name="editar_carro">Editar</string>
     <string name="editado_com_sucesso">Carro editado com sucesso.</string>
+    <string name="abasteca_alcool">Abasteça com Álcool.</string>
+    <string name="abasteca_gasolina">Abasteça com Gasolina.</string>
+    <string name="precos_equivalentes">Os preços são equivalentes.</string>
+    <string name="km_viagem">Digite a distância de sua viagem (km)</string>
+    <string name="cidade">Cidade</string>
+    <string name="viagem">Viagem</string>
 </resources>

@@ -4,10 +4,31 @@
     android:layout_height="match_parent"
     tools:context="layout.ViagemFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="esse é o viagem" />
+        android:orientation="vertical" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/km_viagem" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_km_viagem" />
 
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spn_carros"
+            android:layout_marginTop="@dimen/padding_spinner" >
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_resultado"
+            android:textSize="30sp"
+            android:gravity="center" />
+    </LinearLayout>
 </FrameLayout>

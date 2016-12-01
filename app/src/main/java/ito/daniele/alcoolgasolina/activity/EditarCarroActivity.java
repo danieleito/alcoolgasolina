@@ -54,7 +54,7 @@ public class EditarCarroActivity extends AppCompatActivity {
             }
             carro.setNome(edtNome.getText().toString());
             carro.setAlcoolCidade(Double.parseDouble(edtAlcoolCidade.getText().toString()));
-            carro.setGasolinaCidade(Double.parseDouble(edtAlcoolCidade.getText().toString()));
+            carro.setGasolinaCidade(Double.parseDouble(edtGasolinaCidade.getText().toString()));
             carro.setAlcoolViagem(Double.parseDouble(edtAlcoolViagem.getText().toString()));
             carro.setGasolinaViagem(Double.parseDouble(edtGasolinaViagem.getText().toString()));
             carro.save();

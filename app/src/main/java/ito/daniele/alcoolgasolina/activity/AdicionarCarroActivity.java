@@ -41,7 +41,7 @@ public class AdicionarCarroActivity extends AppCompatActivity {
             Carro carro = new Carro();
             carro.setNome(edtNome.getText().toString());
             carro.setAlcoolCidade(Double.parseDouble(edtAlcoolCidade.getText().toString()));
-            carro.setGasolinaCidade(Double.parseDouble(edtAlcoolCidade.getText().toString()));
+            carro.setGasolinaCidade(Double.parseDouble(edtGasolinaCidade.getText().toString()));
             carro.setAlcoolViagem(Double.parseDouble(edtAlcoolViagem.getText().toString()));
             carro.setGasolinaViagem(Double.parseDouble(edtGasolinaViagem.getText().toString()));
             carro.save();

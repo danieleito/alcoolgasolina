@@ -28,7 +28,7 @@ public class TabsAdapter extends FragmentStatePagerAdapter {
 
         titles = new String[]{
                 context.getString(R.string.fragment_main_title),
-                context.getString(R.string.fragment_viagem_title),
+//                context.getString(R.string.fragment_viagem_title),
                 context.getString(R.string.fragment_carros_title)
         };
 
@@ -43,9 +43,9 @@ public class TabsAdapter extends FragmentStatePagerAdapter {
 
         if (position == 0) {
             fragment = new MainFragment();
+//        } else if (position == 1) {
+//            fragment = new ViagemFragment();
         } else if (position == 1) {
-            fragment = new ViagemFragment();
-        } else if (position == 2) {
             fragment = new CarrosFragment();
         }
 
