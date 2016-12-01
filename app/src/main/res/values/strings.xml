@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AlcoolGasolina</string>
+    <string name="app_name">Álcool ou Gasolina</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
@@ -35,4 +35,6 @@
     <string name="km_viagem">Digite a distância de sua viagem (km)</string>
     <string name="cidade">Cidade</string>
     <string name="viagem">Viagem</string>
+    <string name="gasolina_">Gasolina: R$ [VALOR]</string>
+    <string name="alcool_">Álcool: R$ [VALOR]</string>
 </resources>

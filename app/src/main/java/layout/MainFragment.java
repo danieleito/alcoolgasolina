@@ -254,15 +254,23 @@ public class MainFragment extends Fragment {
         double precoKmGasolina = posto.getGasolina() / gasolina;
         double precoKmAlcool = posto.getAlcool() / alcool;
 
+        String resultado = "";
+        resultado += context.getString(R.string.gasolina_).replace("[VALOR]", String.valueOf(posto.getGasolina()));
+        resultado += "\n";
+        resultado += context.getString(R.string.alcool_).replace("[VALOR]", String.valueOf(posto.getAlcool()));
+        resultado += "\n";
+
         if (precoKmAlcool < precoKmGasolina) {
+            resultado += context.getString(R.string.abasteca_alcool);
             tvResultado.setTextColor(context.getResources().getColor(R.color.verde));
-            tvResultado.setText(R.string.abasteca_alcool);
         } else if (precoKmAlcool > precoKmGasolina) {
+            resultado += context.getString(R.string.abasteca_gasolina);
             tvResultado.setTextColor(context.getResources().getColor(R.color.vermelho));
-            tvResultado.setText(R.string.abasteca_gasolina);
         } else {
-            tvResultado.setText(R.string.precos_equivalentes);
+            resultado += context.getString(R.string.precos_equivalentes);
         }
+
+        tvResultado.setText(resultado);
     }
 
     private View.OnClickListener onGroupClick = new View.OnClickListener() {
