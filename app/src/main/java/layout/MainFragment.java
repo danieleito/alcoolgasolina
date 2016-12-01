@@ -38,7 +38,7 @@ public class MainFragment extends Fragment {
     private static final String TAG = "MainFragment";
     private View view;
     private Spinner spnCarro, spnEstado, spnMunicipio, spnBairro, spnPosto;
-    private TextView tvResultado;
+    private TextView tvResultado, tvAlcool, tvGasolina;
     private RadioGroup rg;
     private RadioButton rbCidade, rbViagem;
     private Context context;
@@ -66,7 +66,8 @@ public class MainFragment extends Fragment {
         spnPosto = (Spinner) view.findViewById(R.id.spn_postos);
         spnPosto.setOnItemSelectedListener(onPostoSelected);
         tvResultado = (TextView) view.findViewById(R.id.tv_resultado);
-
+        tvGasolina = (TextView) view.findViewById(R.id.tv_gasolina);
+        tvAlcool = (TextView) view.findViewById(R.id.tv_alcool);
         rg = (RadioGroup) view.findViewById(R.id.rg_cidade_viagem);
         rbCidade = (RadioButton) view.findViewById(R.id.rb_cidade);
         rbCidade.setOnClickListener(onGroupClick);
@@ -254,23 +255,21 @@ public class MainFragment extends Fragment {
         double precoKmGasolina = posto.getGasolina() / gasolina;
         double precoKmAlcool = posto.getAlcool() / alcool;
 
-        String resultado = "";
-        resultado += context.getString(R.string.gasolina_).replace("[VALOR]", String.valueOf(posto.getGasolina()));
-        resultado += "\n";
-        resultado += context.getString(R.string.alcool_).replace("[VALOR]", String.valueOf(posto.getAlcool()));
-        resultado += "\n";
+        tvGasolina.setText(context.getString(R.string.gasolina_).replace("[VALOR]", String.valueOf(posto.getGasolina())));
+        tvGasolina.setTextColor(context.getResources().getColor(R.color.vermelho));
+
+        tvAlcool.setText(context.getString(R.string.alcool_).replace("[VALOR]", String.valueOf(posto.getAlcool())));
+        tvAlcool.setTextColor(context.getResources().getColor(R.color.verde));
 
         if (precoKmAlcool < precoKmGasolina) {
-            resultado += context.getString(R.string.abasteca_alcool);
+            tvResultado.setText(context.getString(R.string.abasteca_alcool));
             tvResultado.setTextColor(context.getResources().getColor(R.color.verde));
         } else if (precoKmAlcool > precoKmGasolina) {
-            resultado += context.getString(R.string.abasteca_gasolina);
+            tvResultado.setText(context.getString(R.string.abasteca_gasolina));
             tvResultado.setTextColor(context.getResources().getColor(R.color.vermelho));
         } else {
-            resultado += context.getString(R.string.precos_equivalentes);
+            tvResultado.setText(context.getString(R.string.precos_equivalentes));
         }
-
-        tvResultado.setText(resultado);
     }
 
     private View.OnClickListener onGroupClick = new View.OnClickListener() {

@@ -4,71 +4,87 @@
     android:layout_height="match_parent"
     tools:context="layout.MainFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Spinner
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spn_carros"
-            android:padding="@dimen/padding_spinner">
-        </Spinner>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rg_cidade_viagem"
-            android:orientation="horizontal">
-            <RadioButton
-                android:layout_width="wrap_content"
+            <Spinner
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rb_cidade"
-                android:text="@string/cidade"
-                android:checked="true"/>
-            <RadioButton
-                android:layout_width="wrap_content"
+                android:id="@+id/spn_carros"
+                android:padding="@dimen/padding_spinner">
+            </Spinner>
+
+            <RadioGroup
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rb_viagem"
-                android:text="@string/viagem"
-                android:layout_marginLeft="50dp"/>
-        </RadioGroup>
+                android:id="@+id/rg_cidade_viagem"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_cidade"
+                    android:text="@string/cidade"
+                    android:checked="true"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_viagem"
+                    android:text="@string/viagem"
+                    android:layout_marginLeft="50dp"/>
+            </RadioGroup>
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spn_estados"
-            android:padding="@dimen/padding_spinner">
-        </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spn_estados"
+                android:padding="@dimen/padding_spinner">
+            </Spinner>
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spn_municipios"
-            android:padding="@dimen/padding_spinner">
-        </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spn_municipios"
+                android:padding="@dimen/padding_spinner">
+            </Spinner>
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spn_bairros"
-            android:padding="@dimen/padding_spinner">
-        </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spn_bairros"
+                android:padding="@dimen/padding_spinner">
+            </Spinner>
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/spn_postos"
-            android:padding="@dimen/padding_spinner">
-        </Spinner>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spn_postos"
+                android:padding="@dimen/padding_spinner">
+            </Spinner>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_resultado"
-            android:textSize="30sp"
-            android:gravity="center"/>
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_gasolina"
+                android:textSize="18sp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_alcool"
+                android:textSize="18sp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_resultado"
+                android:textSize="30sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
