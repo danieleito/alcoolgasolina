@@ -243,7 +243,6 @@ public class MainFragment extends Fragment {
     };
 
     private void calcula(Posto posto, Carro carro) {
-
         double gasolina, alcool;
         if (rg.getCheckedRadioButtonId() == R.id.rb_cidade) {
             gasolina = carro.getGasolinaCidade();

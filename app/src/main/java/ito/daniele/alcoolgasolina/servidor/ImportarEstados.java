@@ -19,8 +19,6 @@ public class ImportarEstados extends AsyncTask<Void, String, ArrayList<Estado>> 
     private final String URL = "http://www.inf.ufpr.br/dhi10/android/estados.json";
     public IAsyncResponse delegate = null;
 
-
-
     @Override
     protected ArrayList<Estado> doInBackground(Void... params) {
         Servidor servidor = new Servidor();

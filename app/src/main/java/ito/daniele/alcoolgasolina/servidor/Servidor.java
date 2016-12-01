@@ -25,7 +25,7 @@ public class Servidor {
             throw new Exception("("+URL+") - HTTP error code: " + httpResponse.getStatusLine().getStatusCode());
         } else {
             InputStream is = httpEntity.getContent();
-            BufferedReader reader2 = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
+            BufferedReader reader2 = new BufferedReader(new InputStreamReader(is, "utf-8"), 8);
             String s;
             String r = "";
             while((s = reader2.readLine())!=null) {

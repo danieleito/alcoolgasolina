@@ -44,7 +44,7 @@ public class CarrosFragment extends Fragment {
         @Override
         public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
             excluir(position);
-            return false;
+            return true;
         }
     };
     private AdapterView.OnItemClickListener onItemClickCarros = new AdapterView.OnItemClickListener() {
@@ -109,6 +109,9 @@ public class CarrosFragment extends Fragment {
             Toast.makeText(context, R.string.erro_excluir_carro, Toast.LENGTH_LONG).show();
         }
     }
+
+
+
 
 
 }
