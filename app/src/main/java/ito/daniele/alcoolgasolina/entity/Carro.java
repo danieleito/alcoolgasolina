@@ -2,11 +2,13 @@ package ito.daniele.alcoolgasolina.entity;
 
 import com.orm.SugarRecord;
 import com.orm.dsl.NotNull;
+import com.orm.dsl.Table;
 
 /**
  * Created by Daniele on 24/11/2016.
  */
 
+@Table
 public class Carro extends SugarRecord {
 
     @NotNull

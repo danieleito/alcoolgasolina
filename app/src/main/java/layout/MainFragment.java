@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -43,6 +44,7 @@ public class MainFragment extends Fragment {
     private RadioButton rbCidade, rbViagem;
     private Context context;
     private ProgressDialog progressDialog;
+    private ImageView ivAtualizar;
 
     @Nullable
     @Override
@@ -73,6 +75,8 @@ public class MainFragment extends Fragment {
         rbCidade.setOnClickListener(onGroupClick);
         rbViagem = (RadioButton) view.findViewById(R.id.rb_viagem);
         rbViagem.setOnClickListener(onGroupClick);
+        ivAtualizar = (ImageView) view.findViewById(R.id.iv_atualiza);
+        ivAtualizar.setOnClickListener(onAtualizarClick);
     }
 
     private void popularSpinnerCarros() {
@@ -282,6 +286,13 @@ public class MainFragment extends Fragment {
             } catch (Exception ex) {
                 Log.e(TAG, "onGroupClick", ex);
             }
+        }
+    };
+
+    private View.OnClickListener onAtualizarClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            popularSpinnerCarros();
         }
     };
 }

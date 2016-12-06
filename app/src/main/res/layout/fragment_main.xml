@@ -12,12 +12,26 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <Spinner
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spn_carros"
-                android:padding="@dimen/padding_spinner">
-            </Spinner>
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spn_carros"
+                    android:layout_weight="1"
+                    android:padding="@dimen/padding_spinner">
+                </Spinner>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_atualiza"
+                    android:src="@android:drawable/ic_menu_rotate"
+                    android:tint="@color/colorAccent" />
+            </LinearLayout>
 
             <RadioGroup
                 android:layout_width="match_parent"
