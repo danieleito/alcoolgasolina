@@ -295,4 +295,10 @@ public class MainFragment extends Fragment {
             popularSpinnerCarros();
         }
     };
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        popularSpinnerCarros();
+    }
 }

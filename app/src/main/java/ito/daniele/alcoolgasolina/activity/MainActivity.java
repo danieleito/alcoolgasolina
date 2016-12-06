@@ -38,7 +38,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void iniciarAtributos() {
         mViewPager = (ViewPager) findViewById(R.id.vp_tabs);
-        mViewPager.setAdapter(new TabsAdapter(getSupportFragmentManager(), this));
-    }
+        final TabsAdapter tabsAdapter = new TabsAdapter(getSupportFragmentManager(), this);
+        mViewPager.setAdapter(tabsAdapter);
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (position == 0) {
+                    tabsAdapter.mainFragment.onResume();
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+    }
 }

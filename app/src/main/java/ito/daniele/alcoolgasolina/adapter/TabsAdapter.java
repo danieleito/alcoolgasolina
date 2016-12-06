@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
@@ -22,6 +23,7 @@ public class TabsAdapter extends FragmentStatePagerAdapter {
     private Context context;
     private String[] titles;
     private int heightIcon;
+    public Fragment mainFragment;
 
     public TabsAdapter(FragmentManager fragmentManager, Context context) {
         super(fragmentManager);
@@ -43,6 +45,7 @@ public class TabsAdapter extends FragmentStatePagerAdapter {
 
         if (position == 0) {
             fragment = new MainFragment();
+            mainFragment = fragment;
 //        } else if (position == 1) {
 //            fragment = new ViagemFragment();
         } else if (position == 1) {
